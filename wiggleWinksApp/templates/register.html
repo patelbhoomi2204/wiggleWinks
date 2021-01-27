@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+  {% include "header.html" %}
+  <div class="login">
+    <div class="login_fp">
+      {% if messages %}
+        {% for message in messages %}
+          <p class="error">{{message}}</p>
+        {% endfor %}
+      {% endif %}
+      <h1>Register to Wigglewinks</h1>
+      <p>Already have an account? <a href="/account/login">Sign In</a></p>
+      <form action="/account/register" method="POST">
+        {% csrf_token %}
+        <div class="content_ip">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="fname" value="" >
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lname" value="" >
+          <label for="email">Email</label>
+          <input type="text" id="email" name="email" value="" >
+          <label for="pw">Password</label>
+          <input type="text" id="pw" name="pw" value="" >
+          <label for="pwc">Confirm Password</label>
+          <input type="text" id="pwc" name="pwc" value="" >
+        </div>
+        <input class="btn-s" type="submit" value="Register">
+      </form>
+    </div>
+  </div>
+</body>
+</html>

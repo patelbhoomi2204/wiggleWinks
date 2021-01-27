@@ -1,0 +1,145 @@
+body, html {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+header {
+  display: flex;
+  padding: 15px 50px;
+  background-color: #fff;
+  -webkit-box-shadow: inset 0px -1px 0px #f3f4f4;
+  box-shadow: inset 0px -1px 0px #f3f4f4;
+  max-width: 1280px;
+  justify-content: space-between;
+}
+
+.sl {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.search {
+  -webkit-flex: 60;
+  -ms-flex: 60;
+  flex: 60;
+  padding: 8px 16px;
+  border-radius: 8px 0 0 8px;
+  border: none;
+  margin-right: 1px;
+  background-color: #EFEFEF;
+}
+
+.location {
+  -webkit-flex: 40;
+  -ms-flex: 40;
+  flex: 40;
+  padding: 8px 16px;
+  border: none;
+  background-color: #EFEFEF;
+}
+.searchButton {
+  width:20px;
+  height: 20px;
+  padding: 6px 16px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #fff;
+  background-color:#ea4c89;
+  border-radius: 0 8px 8px 0;
+}
+.logoImg {
+  width:80px;
+  height: 80px;
+}
+.headerButton {
+  text-decoration: none;
+  padding: 7px 16px;
+  display: inline-block;
+  font-weight: 500;
+}
+
+.headerIcon {
+  width:20px;
+  height: 20px;
+  padding: 0 20px;
+}
+
+.login {
+  display: flex;
+}
+
+.login_fp {
+  border-radius: 5px;
+  padding: 60px;
+  margin: 0 auto;
+  width: 640px;
+}
+
+.content_ip {
+  display: flex;
+  flex-flow: column;
+}
+
+.content_ip label {
+  font-weight: 500;
+  color: #202428;
+  display: flex;
+  justify-content: space-between;
+}
+
+.content_ip input {
+  padding: 7px 8px;
+  font-family: inherit;
+  border: 1px solid transparent;
+  background-color: #f3f3f4;
+  margin: 12px 0;
+  appearance: none;
+  color: #0d0c22;
+  box-sizing: border-box;
+  height: 40px;
+  padding: 10px 16px;
+  outline: none;
+  border-radius: 8px;
+}
+
+.btn-s {
+  display: block;
+  padding: 10px 16px;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  background: #ea4c89;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+  border-radius: 8px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
+  outline: none;
+  font-weight: 700;
+  height: 40px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+  margin-top: 22px;
+  color: #fff;
+  width: 200px;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.contentCard {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.form-lat-lon {
+  display: none;
+}
