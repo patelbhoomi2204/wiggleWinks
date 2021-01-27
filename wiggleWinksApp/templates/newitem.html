@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
+  {% include "header.html" %}
   <h1>Share love!</h1>
   <form action="/item/new" method="post">
     {% csrf_token %}

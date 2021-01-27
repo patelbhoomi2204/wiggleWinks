@@ -48,9 +48,15 @@ def logout(request):
     return redirect("/")
 
 def newItem(request):
-    print(request.session['loggedInId']);
     if request.method == 'GET':
-        return render(request, "newitem.html")
+        if 'loggedInId' in request.session:
+            context = {
+                'loggedInUser': User.objects.get(id = request.session['loggedInId']),
+                'items': Item.objects.all()
+            }
+            return render(request, "newitem.html", context)
+        else:
+            return redirect("/account/register")
     else:
         errors = Item.objects.itemValidator(request.POST)
         if len(errors) > 0:
