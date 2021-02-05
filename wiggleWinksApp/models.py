@@ -68,6 +68,7 @@ class User(models.Model):
 class Item(models.Model):
   title = models.CharField(max_length=255)
   description = models.TextField()
+  image = models.ImageField(default='default.jpg', upload_to='item_pics')
   category = models.CharField(max_length=255)
   condition = models.CharField(max_length=255)
   price = models.CharField(max_length=255)
@@ -76,4 +77,3 @@ class Item(models.Model):
   created_at = models.DateTimeField(auto_now_add = True)
   updated_at = models.DateTimeField(auto_now = True)
   objects = ItemManager()
-
