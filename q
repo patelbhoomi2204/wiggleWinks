@@ -1,0 +1,32 @@
+[1mdiff --git a/db.sqlite3 b/db.sqlite3[m
+[1mindex acb0714..5726dc2 100644[m
+Binary files a/db.sqlite3 and b/db.sqlite3 differ
+[1mdiff --git a/wiggleWinksApp/__pycache__/views.cpython-39.pyc b/wiggleWinksApp/__pycache__/views.cpython-39.pyc[m
+[1mindex 6331c7e..e0366c2 100644[m
+Binary files a/wiggleWinksApp/__pycache__/views.cpython-39.pyc and b/wiggleWinksApp/__pycache__/views.cpython-39.pyc differ
+[1mdiff --git a/wiggleWinksApp/templates/newitem.html b/wiggleWinksApp/templates/newitem.html[m
+[1mindex dbacfbd..f0ae2cc 100644[m
+[1m--- a/wiggleWinksApp/templates/newitem.html[m
+[1m+++ b/wiggleWinksApp/templates/newitem.html[m
+[36m@@ -38,6 +38,8 @@[m
+       <input class="form-lon-ip" type="text" id="lon" name="lon">[m
+     </div>[m
+     <button class="btn-s btn-lcn" onclick="showPosition()">Find my location</button>[m
+[32m+[m[32m    <label for="image">Image</label>[m
+[32m+[m[32m    <input type="file" name="image" id="file-input" accept="image/x-png,image/jpeg,image/jpg"/>[m
+     <input type="submit" value="Add item">[m
+     <p class="error"></p>[m
+   </form>[m
+[1mdiff --git a/wiggleWinksApp/views.py b/wiggleWinksApp/views.py[m
+[1mindex f6f826f..730e7f5 100644[m
+[1m--- a/wiggleWinksApp/views.py[m
+[1m+++ b/wiggleWinksApp/views.py[m
+[36m@@ -64,7 +64,6 @@[m [mdef newItem(request):[m
+                 messages.error(request, value)[m
+             return redirect("/item/new")[m
+         else:[m
+[31m-            Item.objects.create(title = request.POST['title'], description = request.POST['description'], category = request.POST['category'], condition = request.POST['condition'], price = request.POST['price'], creator =  User.objects.get(id = request.session['loggedInId']))[m
+[32m+[m[32m            Item.objects.create(title = request.POST['title'], description = request.POST['description'], category = request.POST['category'], condition = request.POST['condition'], price = request.POST['price'], image = request.FILES['image'], creator =  User.objects.get(id = request.session['loggedInId']))[m
+             # addedItem.favoritor.add(User.objects.get(id=request.session['loggedInId']))[m
+             return redirect("/")[m
+[31m-[m

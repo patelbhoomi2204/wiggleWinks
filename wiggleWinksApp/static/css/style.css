@@ -16,12 +16,15 @@ header {
   box-shadow: inset 0px -1px 0px #f3f4f4;
   max-width: 1280px;
   justify-content: space-between;
+  margin: 0 auto;
 }
 
 .sl {
   max-width: 600px;
   margin: 0 auto;
+  padding: 6px 0;
   display: flex;
+  height: 44px;
 }
 
 .search {
@@ -46,7 +49,7 @@ header {
 .searchButton {
   width:20px;
   height: 20px;
-  padding: 6px 16px;
+  padding: 12px 16px;
   text-decoration: none;
   font-weight: 500;
   color: #fff;
@@ -59,7 +62,7 @@ header {
 }
 .headerButton {
   text-decoration: none;
-  padding: 7px 16px;
+  padding: 20px 16px;
   display: inline-block;
   font-weight: 500;
 }
@@ -138,8 +141,63 @@ header {
 .contentCard {
   display: flex;
   justify-content: space-evenly;
+  width: 1280px;
+  margin: 0 auto;
+}
+
+.contentCard_item {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #d8d8d8;
+  margin: 0 10px;
+  border-radius: 10px;
+}
+
+.contentCard_item_a {
+  text-decoration: none;
+}
+
+.contentCard_item_img {
+  width: 100%;
+  height: 240px;
+}
+
+.contentCard_detail_wrap {
+  padding: 10px 0;
+}
+
+.contentCard_detail_title {
+  font-size: 18px;
+  line-height: 24px;
+  color: #4a4a4a;
+  font-weight: 700;
+}
+
+.contentCard_detail_price {
+  font-size: 20px;
+  line-height: 28px;
+  color: #4a4a4a;
+  font-weight: 900;
+  display: block;
 }
 
 .form-lat-lon {
   display: none;
+}
+
+.contentDetail {
+  padding-top: 60px;
+  display: flex;
+  width: 1280px;
+  margin: 0 auto;
+}
+
+.contentDetail_right {
+  padding: 40px 0 40px 60px;
+}
+
+.contentDetail_img {
+  width: 500px;
+  height: 500px;
+  border-radius: 5px;
 }

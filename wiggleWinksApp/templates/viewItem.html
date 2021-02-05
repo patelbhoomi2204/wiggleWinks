@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+  {% include "header.html" %}
+  <div class="contentDetail">
+    <div class="contentDetail_left">
+      <img class="contentDetail_img" src={{Item.image.url}}/>
+    </div>
+    <div class="contentDetail_right">
+      <p>{{Item.category}}</p>
+      <h1>{{Item.title}}</h1>
+      <p>{{Item.price}}</p>
+      <p>{{Item.condition}}</p>
+      <p>{{Item.description}}</p>
+      <p>{{Item.creator.first_name}}</p>
+    </div>
+  </div>
+</body>
+</html>

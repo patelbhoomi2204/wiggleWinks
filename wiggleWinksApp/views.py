@@ -67,3 +67,13 @@ def newItem(request):
             Item.objects.create(title = request.POST['title'], description = request.POST['description'], category = request.POST['category'], condition = request.POST['condition'], price = request.POST['price'], image = request.FILES['image'], creator =  User.objects.get(id = request.session['loggedInId']))
             # addedItem.favoritor.add(User.objects.get(id=request.session['loggedInId']))
             return redirect("/")
+
+def viewItem(request, itemId):
+    if 'loggedInId' in request.session:
+        context = {
+            'loggedInUser': User.objects.get(id = request.session['loggedInId']),
+            'Item' : Item.objects.get(id=itemId)
+        }
+        return render(request, "viewItem.html", context)
+    else:
+        return redirect("/account/register")

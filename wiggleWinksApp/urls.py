@@ -10,7 +10,8 @@ urlpatterns = [
     path('account/login', views.login),
     path('account/register', views.register),
     path('logout', views.logout),
-    path( 'item/new', views.newItem)
+    path( 'item/new', views.newItem),
+    path('view/<int:itemId>', views.viewItem)
 ]
 
 if settings.DEBUG:
