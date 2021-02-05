@@ -64,7 +64,6 @@ def newItem(request):
                 messages.error(request, value)
             return redirect("/item/new")
         else:
-            Item.objects.create(title = request.POST['title'], description = request.POST['description'], category = request.POST['category'], condition = request.POST['condition'], price = request.POST['price'], creator =  User.objects.get(id = request.session['loggedInId']))
+            Item.objects.create(title = request.POST['title'], description = request.POST['description'], category = request.POST['category'], condition = request.POST['condition'], price = request.POST['price'], image = request.FILES['image'], creator =  User.objects.get(id = request.session['loggedInId']))
             # addedItem.favoritor.add(User.objects.get(id=request.session['loggedInId']))
             return redirect("/")
-
