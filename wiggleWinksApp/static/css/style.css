@@ -9,6 +9,10 @@ body {
 }
 
 header {
+  -webkit-box-shadow: inset 0px -1px 0px #f3f4f4;
+  box-shadow: inset 0px -1px 0px #f3f4f4;
+}
+.header_item {
   display: flex;
   padding: 15px 50px;
   background-color: #fff;
@@ -18,7 +22,6 @@ header {
   justify-content: space-between;
   margin: 0 auto;
 }
-
 .sl {
   max-width: 600px;
   margin: 0 auto;
@@ -89,6 +92,10 @@ header {
   flex-flow: column;
 }
 
+.addContentWrapper .content_ip {
+  width: 1000px;
+}
+
 .content_ip label {
   font-weight: 500;
   color: #202428;
@@ -96,7 +103,9 @@ header {
   justify-content: space-between;
 }
 
-.content_ip input {
+.content_ip input,
+.content_ip textarea,
+.content_ip select {
   padding: 7px 8px;
   font-family: inherit;
   border: 1px solid transparent;
@@ -110,7 +119,15 @@ header {
   outline: none;
   border-radius: 8px;
 }
-
+.content_ip textarea {
+  height: 250px;
+}
+.content_ip input[type="submit"] {
+  font-weight: 700;
+  width: 400px;
+  cursor: pointer;
+  background: antiquewhite;
+}
 .btn-s {
   display: block;
   padding: 10px 16px;
@@ -131,7 +148,7 @@ header {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   text-align: center;
-  margin-top: 22px;
+  margin: 22px 0 12px;
   color: #fff;
   width: 200px;
   font-size: 14px;
@@ -141,15 +158,21 @@ header {
 .contentCard {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
   width: 1280px;
   margin: 0 auto;
+  padding: 60px;
 }
-
+.addContentWrapper {
+  width: 1280px;
+  margin: 0 auto;
+  padding: 60px 0;
+}
 .contentCard_item {
-  width: 300px;
+  max-width: 275px;
   padding: 10px;
   border: 1px solid #d8d8d8;
-  margin: 0 10px;
+  margin: 10px;
   border-radius: 10px;
 }
 
@@ -178,7 +201,42 @@ header {
   line-height: 28px;
   color: #4a4a4a;
   font-weight: 900;
-  display: block;
+}
+
+.contentCard_title {
+  font-weight: 500;
+}
+
+.contentCard_detail_category {
+  text-transform: uppercase;
+  color: #ea4c89;
+  font-size: 14px;
+}
+
+.contentCard_detail_condition {
+  font-size: 16px;
+  line-height: 18px;
+  color: #4a4a4a;
+}
+
+.contentCard_detail_creator {
+  font-size: 16px;
+  line-height: 18px;
+  color: #747878;
+  font-weight: 500;
+}
+.contentCard_detail_description {
+  font-size: 16px;
+  line-height: 18px;
+  color: #747878;
+  font-weight: 500;
+  margin: 40px 0;
+}
+.contentCard_detail_label {
+  font-size: 14px;
+  color: #4a4a4a;
+  margin: 5px 0;
+  font-weight: 500;
 }
 
 .form-lat-lon {
@@ -200,4 +258,13 @@ header {
   width: 500px;
   height: 500px;
   border-radius: 5px;
+}
+.message_creator {
+  background-color: #ea4c89;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 15px;
+  padding: 7px 15px;
+  margin-right: 15px;
 }

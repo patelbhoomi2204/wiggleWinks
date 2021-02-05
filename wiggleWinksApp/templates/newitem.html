@@ -9,41 +9,43 @@
 </head>
 <body>
   {% include "header.html" %}
-  <h1>Share love!</h1>
-  <form action="/item/new" method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    <label for="title">Title</label>
-    <input type="text" id="title" name="title">
-    <label for="description">Description</label>
-    <textarea placeholder="Description" id="description" name="description"></textarea>
-    <label for="category">Category</label>
-    <select id="category" name="category" value="">
-      <option>Educational toy</option>
-      <option>Outdoor fun</option>
-      <option>Puzzle</option>
-    </select>
-    <label for="condition">Condition</label>
-    <select id="condition" name="condition" value="">
-      <option>New</option>
-      <option>Open box</option>
-      <option>Used</option>
-    </select>
-    <label for="price">Price</label>
-    <input type="text" id="price" name="price">
-    <label for="location">Set location</label>
-    <div class="form-lat-lon">
-      <label for="lat">Lattitude</label>
-      <input class="form-lat-ip" type="text" id="lat" name="lat">
-      <label for="lon">Longitude</label>
-      <input class="form-lon-ip" type="text" id="lon" name="lon">
-    </div>
-    <button class="btn-s btn-lcn" onclick="showPosition()">Find my location</button>
-    <label for="image">Image</label>
-    <input type="file" name="image" id="file-input" accept="image/x-png,image/jpeg,image/jpg"/>
-    <input type="submit" value="Add item">
-    <p class="error"></p>
-  </form>
-  {% load static %}
+  <div class="addContentWrapper">
+    <h1>Share love!</h1>
+    <form class="content_ip" action="/item/new" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <label for="title">Title</label>
+      <input type="text" id="title" name="title">
+      <label for="description">Description</label>
+      <textarea placeholder="Description" id="description" name="description"></textarea>
+      <label for="category">Category</label>
+      <select id="category" name="category" value="">
+        <option>Educational toy</option>
+        <option>Outdoor fun</option>
+        <option>Puzzle</option>
+      </select>
+      <label for="condition">Condition</label>
+      <select id="condition" name="condition" value="">
+        <option>New</option>
+        <option>Open box</option>
+        <option>Used</option>
+      </select>
+      <label for="price">Price</label>
+      <input type="text" id="price" name="price">
+      <label for="location">Set location</label>
+      <div class="form-lat-lon">
+        <label for="lat">Lattitude</label>
+        <input class="form-lat-ip" type="text" id="lat" name="lat">
+        <label for="lon">Longitude</label>
+        <input class="form-lon-ip" type="text" id="lon" name="lon">
+      </div>
+      <button class="btn-s btn-lcn" onclick="showPosition()">Find my location</button>
+      <label for="image">Image</label>
+      <input type="file" name="image" id="file-input" accept="image/x-png,image/jpeg,image/jpg"/>
+      <input type="submit" value="Add item">
+      <p class="error"></p>
+    </form>
+    {% load static %}
+  </div>
   <script src="{% static 'js/main.js' %}"></script>
 </body>
 </html>

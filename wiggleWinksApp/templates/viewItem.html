@@ -14,12 +14,12 @@
       <img class="contentDetail_img" src={{Item.image.url}}/>
     </div>
     <div class="contentDetail_right">
-      <p>{{Item.category}}</p>
-      <h1>{{Item.title}}</h1>
-      <p>{{Item.price}}</p>
-      <p>{{Item.condition}}</p>
-      <p>{{Item.description}}</p>
-      <p>{{Item.creator.first_name}}</p>
+      <p class="contentCard_detail_category">{{Item.category}}</p>
+      <h1 class="contentCard_title">{{Item.title}}</h1>
+      <p class="contentCard_detail_label">PRICE: <span class="contentCard_detail_price">${{Item.price}}</span></p>
+      <p class="contentCard_detail_label">CONDITION: <span class="contentCard_detail_condition">{{Item.condition}}</span></p>
+      <p class="contentCard_detail_description">{{Item.description}}</p>
+      <p><button class="message_creator">Message</button><span class="contentCard_detail_creator">{{Item.creator.first_name}} {{Item.creator.last_name}}</span></p>
     </div>
   </div>
 </body>
